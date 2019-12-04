@@ -16,6 +16,9 @@ class CreateSupplyListsTable extends Migration
         Schema::create('supply_lists', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->string('mylists');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

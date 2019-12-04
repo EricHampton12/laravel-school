@@ -18,6 +18,6 @@ class GradeController extends Controller
     {
         $grades = DB::table('grade_level')->get();
 
-        return view('supply.id', ['grade_level' => $grades]);
+        return view('grades.id', ['grade_level' => $grades]);
     }
 }
